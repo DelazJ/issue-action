@@ -12,8 +12,8 @@ Choose whether you want to check for a keyword match in the issue `title`, the i
 
 #### Parameters
 
-Automatically set `BUG` label and assign `@username` when Issue contains `bug` or `error`.
-Automatically set `help-wanted` label and assign `@username` when Issue contains `help` or `guidance`.
+Automatically set `BUG` label, assign `@username` and milestone to `2` when Issue contains `bug` or `error`.
+Automatically set `help-wanted` label, assign `@username` and milestone to `3` when Issue contains `help` or `guidance`.
 
 ### Example
 
@@ -32,7 +32,7 @@ jobs:
       - uses: Naturalclar/issue-action@v2.0.2
         with:
           title-or-body: "both"
-          parameters: '[ {"keywords": ["bug", "error"], "labels": ["BUG"], "assignees": ["username"]}, {"keywords": ["help", "guidance"], "labels": ["help-wanted"], "assignees": ["username"]}]'
+          parameters: '[ {"keywords": ["bug", "error"], "labels": ["BUG"], "assignees": ["username"], "milestone": "2"}, {"keywords": ["help", "guidance"], "labels": ["help-wanted"], "assignees": ["username"], "milestone": ["3"]}]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 ```
 
