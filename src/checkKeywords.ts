@@ -1,10 +1,10 @@
 export const checkKeywords = (
-  parameters: { keywords: string[], labels: string[], assignees: string[] }[],
+  parameters: { keywords: string[], labels: string[], assignees: string[], milestone: string }[],
   content: string
-): { keywords: string[], labels: string[], assignees: string[] }[] | null => {
+): { keywords: string[], labels: string[], assignees: string[], milestone: string }[] | null => {
   console.log('issue content:', content);
 
-  let matchingKeywords: { keywords: string[], labels: string[], assignees: string[] }[] = [];
+  let matchingKeywords: { keywords: string[], labels: string[], assignees: string[], milestone: string }[] = [];
 
   parameters.forEach(obj => {
     return obj.keywords.forEach(keyword => {

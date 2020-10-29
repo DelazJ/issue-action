@@ -12,6 +12,6 @@ jobs:
       - run: npm run build
       - uses: ./
         with:
-          parameters: '[ {"keywords": ["label", "test"], "labels": ["good first issue", "foo"], "assignees": []}, {"keywords": ["assign", "test"], "labels": [], "assignees": ["Naturalclar"]}]'
+          parameters: '[ {"keywords": ["label", "test"], "labels": ["good first issue", "foo"], "assignees": [], "milestone": ""}, {"keywords": ["assign", "test"], "labels": [], "assignees": ["Naturalclar"], "milestone": ""}, {"keywords": ["milestone", "test"], "labels": [], "assignees": [], "milestone": "3"}]'
           title-or-body: 'both'
           github-token: "${{ secrets.GITHUB_TOKEN }}"

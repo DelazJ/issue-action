@@ -22,3 +22,12 @@ export const getRepo = (): { owner: string; repo: string } => {
   const repo = github.context.repo;
   return repo;
 };
+
+export const getMilestoneNumber = (): number | undefined => {
+  const milestone = github.context.payload.milestone;
+  if (!milestone) {
+    return undefined;
+  }
+
+  return milestone.number;
+};
